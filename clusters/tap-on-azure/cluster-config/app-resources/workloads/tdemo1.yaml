@@ -1,0 +1,26 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  labels:
+    app.kubernetes.io/part-of: tdemo1tests
+    apps.tanzu.vmware.com/workload-type: web
+    apps.tanzu.vmware.com/has-tests: "true" 
+  name: tdemo1
+  namespace: default
+spec:
+  params:
+  - name: scanning_source_policy
+    value: lax-scan-policy
+  - name: scanning_image_policy
+    value: lax-scan-policy
+  - name: annotations
+    value:
+      autoscaling.knative.dev/minScale: "1"
+  env:
+    - name: message
+      value: tanzu1
+  source:
+    git:
+      ref:
+        branch: main
+      url: https://github.com/tfynes-pivotal/tdemo1
