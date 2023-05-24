@@ -46,7 +46,7 @@ $(echo "$GIT_SSH_PRIVATE_KEY" | awk '{printf "          %s\n", $0}')
 $(echo "$GIT_KNOWN_HOSTS" | awk '{printf "          %s\n", $0}')
 EOF
 )
-  echo "${sensitive_tanzu_sync_values}"
+
 # Do not display sensitive values to the terminal.
 if [[ -t 1 ]]; then
   >&2 echo "Sensitive values are present; will be used by ./tanzu-sync/scripts/deploy.sh"
