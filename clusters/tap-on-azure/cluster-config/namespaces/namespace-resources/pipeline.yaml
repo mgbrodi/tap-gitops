@@ -28,8 +28,9 @@ spec:
               wget -qO- $(params.source-url) | tar mxvz
 
               MVNW=mvnw
-
+              
               if [ -f "$MVNW" ]; then
+                  echo "Start mvn tests"
                   ./mvnw test
               else
                   echo "WARNING: No tests were run. This workload is not built with one of the currently supported frameworks. If using another language/framework, update the image and the script sections of the 'pipeline.tekton.dev' resource in your namespace to match your language/framework."
