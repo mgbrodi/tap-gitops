@@ -19,6 +19,8 @@ spec:
     value: "true"
   - name: live-update
     value: "true"
+  - name: clusterBuilder
+    value: my-builder
   source:
     git:
       ref:
