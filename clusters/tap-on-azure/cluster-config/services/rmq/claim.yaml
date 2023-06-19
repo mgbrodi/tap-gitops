@@ -4,7 +4,7 @@
 apiVersion: services.apps.tanzu.vmware.com/v1alpha1
 kind: ClassClaim
 metadata:
-  namespace: dev
+  namespace: default
   name: rmq-1
 spec:
   classRef:
