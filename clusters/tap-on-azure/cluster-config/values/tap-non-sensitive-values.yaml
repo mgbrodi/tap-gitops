@@ -19,8 +19,8 @@ tap_install:
     supply_chain: testing_scanning
     ootb_supply_chain_testing_scanning:      
       registry:
-        server: "gcr.io"
-        repository: "pa-mbrodi/tap" 
+        server: "taplab.azurecr.io"
+        repository: "tap" 
       gitops:
         ssh_secret: ""
         branch: test
