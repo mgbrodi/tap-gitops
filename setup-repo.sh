@@ -59,7 +59,7 @@ fi
 
 mkdir -p clusters/"${cluster_name}"/cluster-config/config/tap-install/.tanzu-managed
 
-cp -R ${catalog_dir}/tap-install/${tap_version}/${secrets_manager}/config/* clusters/"${cluster_name}"/cluster-config/config/tap-install/.tanzu-managed
+cp -R ${catalog_dir}/tap-install/1.5.0/${secrets_manager}/config/* clusters/"${cluster_name}"/cluster-config/config/tap-install/.tanzu-managed
 
 echo "Created cluster configuration in ./clusters/${cluster_name}."
 echo ""
