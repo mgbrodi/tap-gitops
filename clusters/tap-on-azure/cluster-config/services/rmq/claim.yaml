@@ -1,0 +1,13 @@
+# bigcorp-rmq-1.claim.yaml
+
+---
+apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+kind: ClassClaim
+metadata:
+  name: rmq-1
+spec:
+  classRef:
+    name: rabbitmq-unmanaged
+  parameters:
+    storageGB: 2
+    replicas: 3
