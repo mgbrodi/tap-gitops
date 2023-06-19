@@ -79,6 +79,7 @@ tap_install:
       domain_template: '{{.Name}}-{{.Namespace}}.{{.Domain}}'
 
     namespace_provisioner:
+      sync_period: 1m0s
       controller: false
       gitops_install:
         ref: origin/1.5.2
