@@ -27,7 +27,7 @@ spec:
 
               wget -qO- $(params.source-url) | tar mxvz
 
-              if [ ! -f ./mvnw ]; then
+              if [ -f ./mvnw ]; then
                 ./mvnw -e test
               fi
 
