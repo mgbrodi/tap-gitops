@@ -1,7 +1,7 @@
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: app-resources
+  name: all-apps
   namespace: tanzu-sync
   annotations:
     kapp.k14s.io/change-rule.0: "upsert after upserting pkgi"
@@ -9,9 +9,9 @@ spec:
   serviceAccountName: sync-sa
   fetch:
     - git:
-        ref: origin/main
+        ref: origin/1.5.2
         url: https://github.com/mgbrodi/tap-gitops
-        subPath: clusters/taplab/cluster-config/app-resources
+        subPath: clusters/tap-on-azure/cluster-config/apps
   template:
     - ytt: {}
   deploy:
