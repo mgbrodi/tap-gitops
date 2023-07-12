@@ -1,0 +1,23 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: example-app
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    apps.tanzu.vmware.com/has-tests:  "true"
+    app.kubernetes.io/part-of: sample-app
+    tanzu.app.live.view: "true"
+    tanzu.app.live.view.application.flavours: steeltoe
+    tanzu.app.live.view.application.name: steeltoe-weatherforecast
+spec:
+  build:
+    env:
+    - name: BP_DOTNET_PROJECT_PATH
+      value: "src/Content/src/Net6WebApiTemplate.Api"
+  source:
+    git:
+      url: https://github.com/marlonajgayle/Net6WebApiTemplate
+      ref:
+        branch: develop
+    
+
