@@ -16,7 +16,7 @@ spec:
     value:
       autoscaling.knative.dev/minScale: "1"
   serviceClaims:
-  - name: db
+  - name: db # https://github.com/spring-cloud/spring-cloud-bindings
     ref:
       apiVersion: services.apps.tanzu.vmware.com/v1alpha1
       kind: ResourceClaim
