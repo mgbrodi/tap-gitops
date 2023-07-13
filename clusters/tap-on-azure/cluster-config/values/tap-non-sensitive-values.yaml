@@ -17,7 +17,16 @@ tap_install:
     profile: full # Can take iterate, build, run, view.
 
     supply_chain: testing_scanning
-    ootb_supply_chain_testing_scanning:      
+    ootb_supply_chain_testing_scanning:  
+      supported_workloads:
+      - type: web
+        cluster_config_template_name: config-template
+      - type: server
+        cluster_config_template_name: server-template
+      - type: worker
+        cluster_config_template_name: worker-template
+      - type: server-with-volumes
+        cluster_config_template_name: volumes-template    
       registry:
         server: "taplab.azurecr.io"
         repository: "tap" 
