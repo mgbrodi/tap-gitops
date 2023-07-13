@@ -106,5 +106,5 @@ tap_install:
     #       url: https://github.com/vmware-tanzu/application-accelerator-samples.git
     #     path: _ytt_lib/testing-scanning-supplychain-polyglot-setup
 
-excluded_packages:
-- crossplane.tanzu.vmware.com 
+
+
