@@ -78,7 +78,6 @@ spec:
         #@overlay/match missing_ok=True
         #@overlay/remove
         kapp.k14s.io/association:
-
     #@ end
 
     #@ def addVolumes():
@@ -87,10 +86,9 @@ spec:
       #@overlay/match by="name"
       - name: workload
         #@overlay/match missing_ok=True
-        volumeMounts: #@ data.values.params.volumes.volumeMounts
+        volumeMounts: #@ data.values.params.volumeMounts
       #@overlay/match missing_ok=True
       volumes: #@ data.values.params.volumes.volumes
-
     #@ end
 
     #@ def delivery():

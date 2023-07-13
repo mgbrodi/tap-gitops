@@ -7,7 +7,6 @@ metadata:
     apps.tanzu.vmware.com/has-tests:  "true"
     app.kubernetes.io/part-of: example-app
     tanzu.app.live.view: "true"
-    tanzu.app.live.view.application.flavours: steeltoe
     tanzu.app.live.view.application.name: example-app
 spec:
   build:
