@@ -1,0 +1,13 @@
+# bigcorp-rmq-1.claim.yaml
+
+---
+apiVersion: bitnami.messaging.tanzu.vmware.com/v1alpha1
+kind: ClassClaim
+metadata:
+  namespace: default
+  name: rmq-1
+spec:
+  classRef:
+    name: rabbitmq-unmanaged
+  parameters:
+    replicas: 2

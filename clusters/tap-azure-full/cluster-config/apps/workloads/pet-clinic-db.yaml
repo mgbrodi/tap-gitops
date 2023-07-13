@@ -1,0 +1,29 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  labels:
+    app.kubernetes.io/part-of: spring-petclinic
+    apps.tanzu.vmware.com/has-tests: "true"
+    apps.tanzu.vmware.com/workload-type: web
+  name: spring-petclinic
+  namespace: default
+spec:
+  env:
+  - name: SPRING_PROFILES_ACTIVE
+    value: postgres
+  params:
+  - name: annotations
+    value:
+      autoscaling.knative.dev/minScale: "1"
+  serviceClaims:
+  - name: db # https://github.com/spring-cloud/spring-cloud-bindings
+    ref:
+      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+      kind: ResourceClaim
+      name: external-azure-db-claim
+  source:
+    git:
+      ref:
+        branch: main
+        tag: tap-1.2
+      url: https://github.com/sample-accelerators/spring-petclinic
