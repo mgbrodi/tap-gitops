@@ -25,8 +25,8 @@ tap_install:
         cluster_config_template_name: server-template
       - type: worker
         cluster_config_template_name: worker-template
-      - type: server-with-volumes
-        cluster_config_template_name: volumes-template    
+      - type: dwam-server
+        cluster_config_template_name: dwam-template    
       registry:
         server: "taplab.azurecr.io"
         repository: "tap" 
