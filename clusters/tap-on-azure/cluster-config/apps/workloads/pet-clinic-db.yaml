@@ -15,6 +15,16 @@ spec:
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
+  - name: volumes
+    value:
+      volumes:
+      - name: data-mount
+        persistentVolumeClaim:
+          claimName: go-sample-data
+      volumeMounts:
+        - name: data-mount
+          mountPath: /sample-data
+
   serviceClaims:
   - name: db # https://github.com/spring-cloud/spring-cloud-bindings
     ref:
