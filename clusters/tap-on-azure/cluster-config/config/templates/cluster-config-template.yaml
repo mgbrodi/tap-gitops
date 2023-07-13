@@ -88,7 +88,7 @@ spec:
         #@overlay/match missing_ok=True
         volumeMounts: #@ data.values.params.volumeMounts
       #@overlay/match missing_ok=True
-      volumes: #@ data.values.params.volumes.volumes
+      volumes: #@ data.values.params.volumes
     #@ end
 
     #@ def delivery():

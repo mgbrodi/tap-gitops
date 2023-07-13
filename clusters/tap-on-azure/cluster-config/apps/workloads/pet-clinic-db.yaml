@@ -15,14 +15,6 @@ spec:
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
-  volumes:
-  - name: secret-volume
-    secret:
-      secretName: external-azure-db-binding-compatible
-  volumeMounts:
-  - name: secret-volume
-    readOnly: true
-    mountPath: "/etc/secret-volume"
   serviceClaims:
   - name: db # https://github.com/spring-cloud/spring-cloud-bindings
     ref:
