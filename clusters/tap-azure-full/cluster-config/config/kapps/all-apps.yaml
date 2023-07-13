@@ -9,7 +9,7 @@ spec:
   serviceAccountName: sync-sa
   fetch:
     - git:
-        ref: origin/1.5.2
+        ref: origin/full-1.5.2
         url: https://github.com/mgbrodi/tap-gitops
         subPath: clusters/tap-azure-full/cluster-config/apps
   template:

@@ -91,12 +91,12 @@ tap_install:
       sync_period: 1m0s
       controller: false
       gitops_install:
-        ref: origin/1.5.2
+        ref: origin/full-1.5.2
         subPath: clusters/tap-azure-full/cluster-config/namespaces
         url: https://github.com/mgbrodi/tap-gitops
       additional_sources:
       - git:
-          ref: origin/1.5.2
+          ref: origin/full-1.5.2
           subPath: clusters/tap-azure-full/cluster-config/namespaces/namespace-resources
           url: https://github.com/mgbrodi/tap-gitops
         path: _ytt_lib/namespace-resources
